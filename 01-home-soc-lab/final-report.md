@@ -58,7 +58,8 @@ Wazuh generated alert:
 MITRE ATT&CK
 
 -T1059.001 – PowerShell
--Result
+
+Result
 
 Successfully detected.
 
@@ -145,7 +146,18 @@ MITRE ATT&CK
 
 Result
 
-Partially detected through process execution monitoring.
+Execution activity and process relationships were successfully captured and investigated using Sysmon telemetry and Wazuh threat hunting capabilities.
+
+MITRE ATT&CK Techniques Observed
+
+Technique ATT&CK ID
+PowerShell T1059.001
+Windows Command Shell T1059.003
+Registry Run Keys / Startup Folder T1547.001
+Scheduled Tasks T1053.005
+Ingress Tool Transfer T1105
+Application Shimming T1546.011
+Windows Services T1543.003
 
 Findings
 
@@ -159,6 +171,34 @@ The Home SOC environment successfully detected multiple attacker behaviors inclu
 -LOLBins usage
 
 The combination of Sysmon and Wazuh provided strong visibility into endpoint activity and enabled effective threat hunting workflows.
+
+Skills Demonstrated
+
+-Threat Hunting
+-Security Monitoring
+-SIEM Operations
+-Wazuh Administration
+-Sysmon Analysis
+-Windows Event Log Analysis
+-Detection Engineering
+-Incident Investigation
+-Process Tree Analysis
+-MITRE ATT&CK Mapping
+-Alert Triage
+-Endpoint Visibility
+
+Evidence and Screenshots
+
+The following screenshots were collected during the investigation and are available in the screenshots directory:
+
+-wazuh-dashboard-overview.png
+-agent-connected.png
+-sysmon-alert-powershell.png
+-encoded-powershell-detection.png
+-file-drop-detection.png
+-registry-persistence-detection.png
+
+These screenshots provide evidence of alert generation, threat hunting activities, and MITRE ATT&CK technique mapping within the Home SOC environment.
 
 Lessons Learned
 

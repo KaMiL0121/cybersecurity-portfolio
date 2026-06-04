@@ -1,92 +1,107 @@
 Cybersecurity Portfolio
 
-This repository contains my practical cybersecurity projects focused on SOC analysis, threat detection, network security and vulnerability assessment.
+A collection of hands-on cybersecurity projects focused on threat hunting, SOC operations, incident investigation, and vulnerability assessment.
 
-The goal of this portfolio is to document my learning path and demonstrate practical skills useful for entry-level cybersecurity, SOC Analyst and IT Security internship roles.
-
-About Me
-
-I am an IT student specializing in network security and cybersecurity.
-I am currently building hands-on projects related to:
-
-SOC monitoring
-Windows event log analysis
-SIEM tools
-endpoint detection
-network traffic analysis
-vulnerability scanning
-incident investigation
-Portfolio Projects
+Projects
 
 1. Home SOC Lab
 
-A home laboratory environment designed to simulate basic security monitoring and SOC analyst workflows.
+Designed and deployed a Home Security Operations Center (SOC) environment using:
 
-Planned technologies:
+-Wazuh
+-Sysmon
+-Windows 11
+-Kali Linux
+-VirtualBox
 
-Wazuh
-Windows 10/11
-Sysmon
-Kali Linux
-Windows Event Logs
-VirtualBox / VMware
+Key Activities
 
-Project goals:
+-Threat Hunting
+-Attack Simulation
+-MITRE ATT&CK Mapping
+-Detection Engineering
+-Incident Investigation
 
-collect endpoint logs
-configure a SIEM agent
-simulate suspicious activity
-analyze security alerts
-document detections and findings
+Techniques Investigated
 
-Folder:
+-PowerShell Activity
+-Encoded PowerShell
+-Registry Persistence
+-Scheduled Tasks
+-File Drop Detection
+-LOLBins
 
-01-home-soc-lab/ 2. Cybersecurity Write-ups
+📁 Location:
 
-A collection of practical investigation write-ups based on cybersecurity labs and sample analysis scenarios.
+01-home-soc-lab/
 
-Planned topics:
+2. Cybersecurity Write-Ups
 
-phishing email analysis
-Windows Event Log analysis
-Wireshark PCAP analysis
-suspicious PowerShell activity
-IOC extraction
-basic incident investigation
+Collection of practical investigations and analysis exercises.
 
-Folder:
+Topics
 
-02-cybersecurity-writeups/ 3. Vulnerability Assessment Lab
+-Phishing Analysis
+-Suspicious PowerShell Investigation
+-Windows Event Log Analysis
+-Wireshark PCAP Analysis
 
-A lab focused on basic vulnerability assessment and reporting.
+📁 Location:
 
-Planned technologies:
+02-cybersecurity-writeups/
 
-Nmap
-Nessus Essentials or OpenVAS
-Kali Linux
-Metasploitable / vulnerable test machines
+3. Vulnerability Assessment Lab
 
-Project goals:
+Practical vulnerability assessment project focused on discovering and analyzing security weaknesses.
 
-identify live hosts
-enumerate open ports and services
-detect vulnerabilities
-assess risk
-prepare remediation recommendations
+Tools
 
-Folder:
+-Nmap
+-OpenVAS / Nessus
+-Windows
+-Linux
+
+Activities
+
+-Asset Discovery
+-Port Scanning
+-Service Enumeration
+-Vulnerability Identification
+-Risk Analysis
+-Remediation Recommendations
+
+📁 Location:
 
 03-vulnerability-assessment/
-Skills Demonstrated
-Security monitoring
-Log analysis
-SIEM basics
-Network scanning
-Vulnerability assessment
-Incident investigation
-Technical documentation
-Cybersecurity reporting
-Status
 
-This portfolio is currently under development.
+Skills Demonstrated
+
+-Threat Hunting
+-Security Monitoring
+-SIEM Operations
+-Wazuh Administration
+-Sysmon Analysis
+-Incident Investigation
+-Windows Event Analysis
+-Network Analysis
+-Vulnerability Assessment
+-Detection Engineering
+-MITRE ATT&CK Mapping
+
+Tools & Technologies
+
+-Wazuh
+-Sysmon
+-Kali Linux
+-Windows 11
+-VirtualBox
+-PowerShell
+-Nmap
+-Wireshark
+-OpenVAS
+-Git
+-GitHub
+
+Goal
+
+This repository documents my cybersecurity learning journey and demonstrates practical blue-team and security operations skills through hands-on projects and investigations.

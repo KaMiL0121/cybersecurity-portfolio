@@ -1,128 +1,150 @@
-Detection Notes
-PowerShell Activity Detection
-Objective
+# Detection Notes
+
+## PowerShell Activity Detection
+
+### Objective
 
 Detect suspicious PowerShell activity and parent-child process relationships.
 
-Test Activity
+### Test Activity
 
+```powershell
 powershell.exe
 cmd.exe
+```
 
-Detection
+### Detection
 
 Wazuh generated alerts identifying:
 
--PowerShell execution
--PowerShell spawning cmd.exe
--Parent-child process relationships
+- PowerShell execution
+- PowerShell spawning cmd.exe
+- Parent-child process relationships
 
-MITRE ATT&CK
+### MITRE ATT&CK
 
--T1059.001 – PowerShell
--T1059.003 – Windows Command Shell
+- T1059.001 – PowerShell
+- T1059.003 – Windows Command Shell
 
-Encoded PowerShell Detection
+---
 
-Objective
+## Encoded PowerShell Detection
+
+### Objective
 
 Detect Base64-encoded PowerShell execution.
 
-Test Activity
+### Test Activity
 
+```powershell
 powershell.exe -EncodedCommand SQBIA...
+```
 
-Detection
+### Detection
 
 Wazuh detected:
 
--Encoded PowerShell execution
--Suspicious command execution chain
+- Encoded PowerShell execution
+- Suspicious command execution chain
 
-MITRE ATT&CK
+### MITRE ATT&CK
 
--T1059.001 – PowerShell
+- T1059.001 – PowerShell
 
-File Drop Detection
+---
 
-Objective
+## File Drop Detection
+
+### Objective
 
 Detect files written to suspicious locations.
 
-Test Activity
+### Test Activity
 
+```text
 C:\Users\Public\soclab.txt
+```
 
-Detection
+### Detection
 
 Wazuh generated alerts for:
 
--Executable or suspicious files placed in Public directories
--Potential malware staging locations
+- Executable or suspicious files placed in Public directories
+- Potential malware staging locations
 
-MITRE ATT&CK
+### MITRE ATT&CK
 
--T1105 – Ingress Tool Transfer
+- T1105 – Ingress Tool Transfer
 
-Registry Persistence Detection
+---
 
-Objective
+## Registry Persistence Detection
+
+### Objective
 
 Detect Registry Run Key persistence.
 
-Test Activity
+### Test Activity
 
+```cmd
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+```
 
-Detection
+### Detection
 
 Wazuh detected:
 
--Registry key modification
--Registry persistence attempt
+- Registry key modification
+- Registry persistence attempt
 
-MITRE ATT&CK
+### MITRE ATT&CK
 
--T1547.001 – Registry Run Keys / Startup Folder
+- T1547.001 – Registry Run Keys / Startup Folder
 
-Scheduled Task Detection
+---
 
-Objective
+## Scheduled Task Detection
+
+### Objective
 
 Detect scheduled task persistence.
 
-Test Activity
+### Test Activity
 
+```cmd
 schtasks /create
+```
 
-Detection
+### Detection
 
 Wazuh detected:
 
--Scheduled task creation
--Persistence activity
+- Scheduled task creation
+- Persistence activity
 
-MITRE ATT&CK
+### MITRE ATT&CK
 
--T1053.005 – Scheduled Tasks
+- T1053.005 – Scheduled Tasks
 
-LOLBins Detection
+---
 
-Objective
+## LOLBins Detection
+
+### Objective
 
 Detect abuse of native Windows binaries.
 
-Examples
+### Examples
 
--powershell.exe
--cmd.exe
--reg.exe
--schtasks.exe
+- powershell.exe
+- cmd.exe
+- reg.exe
+- schtasks.exe
 
-Detection
+### Detection
 
 Wazuh detected suspicious execution chains involving trusted Windows binaries.
 
-MITRE ATT&CK
+### MITRE ATT&CK
 
--T1218 – Signed Binary Proxy Execution
+- T1218 – Signed Binary Proxy Execution
